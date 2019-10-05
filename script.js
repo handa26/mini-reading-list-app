@@ -3,8 +3,11 @@ let button = document.getElementById("enter");
 let ul = document.querySelector("ul");
 let del = document.querySelectorAll(".delete");
 
+function inputLength() {
+	return input.value.length;
+}
 function addBook() {
-	if (input.value.length > 0) {
+	if (inputLength() > 0) {
 		let li = document.createElement("li");
 		li.appendChild(document.createTextNode(input.value));
 		ul.appendChild(li);
@@ -17,8 +20,14 @@ function addBook() {
 		span.onclick = removeParent;
 	}
 }
+function keyPress(event) {
+	if (inputLength() > 0 && event.which === 13) {
+		addBook();
+	}
+}
 function removeParent(evt){
 	evt.target.parentNode.remove();
 }
 
-button.addEventListener("click", addBook)
+button.addEventListener("click", addBook);
+input.addEventListener("keypress", keyPress);
