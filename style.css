@@ -76,6 +76,23 @@ h1, h2{
     background: #333;
 }
 
+.lang {
+    background: #9361bf;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    width: 10%;
+    text-align: center;
+}
+.lang a {
+    color: white;
+    text-decoration: none;
+}
+.lang:hover{
+    background: #333;
+}
+
 #add-book{
     width: 400px;
     margin: 0 auto;

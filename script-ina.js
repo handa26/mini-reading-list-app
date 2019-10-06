@@ -14,7 +14,7 @@ function addBook() {
 		input.value = "";
 
 		let span = document.createElement("button");
-		span.appendChild(document.createTextNode("Delete"));
+		span.appendChild(document.createTextNode("Hapus"));
 		span.classList.add("delete");
 		li.appendChild(span);
 		span.onclick = removeParent;
